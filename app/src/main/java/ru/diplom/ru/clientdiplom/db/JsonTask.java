@@ -1,8 +1,11 @@
 package ru.diplom.ru.clientdiplom.db;
 
 import android.os.AsyncTask;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -71,10 +74,15 @@ public class JsonTask extends AsyncTask<String, Object, ArrayList<Event>> {
 
     protected void onPostExecute(ArrayList<Event> s) {
         super.onPostExecute(s);
-//        TextView textView = (TextView) mainActivity.findViewById(R.id.txtHelper);
-//        textView.setText(s.toString());
         eventAdapter = new EventAdapter(mainActivity, s);
         ListView listEvents = (ListView) mainActivity.findViewById(R.id.listEvents);
         listEvents.setAdapter(eventAdapter);
+        listEvents.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(mainActivity.getApplicationContext(),
+                        "Это событие номер: "+(++position),Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

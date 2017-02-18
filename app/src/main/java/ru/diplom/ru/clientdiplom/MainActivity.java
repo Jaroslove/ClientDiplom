@@ -14,6 +14,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         JsonTask jsonTask = new JsonTask();
         jsonTask.link(this);
-        jsonTask.execute("http://192.168.56.1:8080/api");
+        jsonTask.execute("http://192.168.56.1:8080/api?method=getAllEvents");
     }
 }
