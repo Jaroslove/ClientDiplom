@@ -12,8 +12,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        new JsonTask().execute("http://192.168.56.1:8080/api");
-//        TextView textView =(TextView)findViewById(R.id.txtHelper);
         JsonTask jsonTask = new JsonTask();
         jsonTask.link(this);
         jsonTask.execute("http://192.168.56.1:8080/api");
