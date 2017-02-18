@@ -15,4 +15,14 @@
         android:layout_height="wrap_content"
         android:text="@string/txt_main"
         android:id="@+id/txtMain" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_main"
+        android:id="@+id/txtHelper"
+        android:layout_below="@+id/txtMain"
+        android:layout_toRightOf="@+id/txtMain"
+        android:layout_toEndOf="@+id/txtMain"
+        android:layout_marginTop="28dp" />
 </RelativeLayout>
