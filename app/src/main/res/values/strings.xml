@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ClientDiplom</string>
     <string name="txt_main">Все события</string>
+    <string name="addEvent">+</string>
+    <string name="add_label">Напиши своё событие</string>
+    <string name="addButtonEvent">Подтвердить</string>
 </resources>

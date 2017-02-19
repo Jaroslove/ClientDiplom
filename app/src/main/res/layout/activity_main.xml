@@ -10,17 +10,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ru.diplom.ru.clientdiplom.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_main"
-        android:id="@+id/txtMain" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_main"
+            android:textSize="30dp"
+            android:id="@+id/txtMain" />
+        <Button
+            android:id="@+id/btnAddEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="250dp"
+            android:text="@string/addEvent"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"/>
 
     <ListView
         android:id="@+id/listEvents"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:paddingTop="16dp">
+        android:paddingTop="40dp">
     </ListView>
 </RelativeLayout>

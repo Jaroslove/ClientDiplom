@@ -1,6 +1,7 @@
 package ru.diplom.ru.clientdiplom.db;
 
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -55,6 +56,7 @@ public class JsonTask extends AsyncTask<String, Object, ArrayList<Event>> {
 
             list = new Gson().fromJson(bilder.toString(), new TypeToken<List<Event>>() {
             }.getType());
+            Log.v(list.toString(),list.toString());
             return list;
 
         } catch (IOException e) {
