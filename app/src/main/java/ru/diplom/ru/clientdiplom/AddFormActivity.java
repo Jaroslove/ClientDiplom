@@ -9,18 +9,25 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import ru.diplom.ru.clientdiplom.db.AddUserTask;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+
+import ru.diplom.ru.clientdiplom.db.UserTask;
 
 public class AddFormActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
-        AddUserTask addUserTask = new AddUserTask();
+        UserTask addUserTask = new UserTask();
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("http://192.168.0.14:8080/api?method=insertNewEvent&name=");
         stringBuilder.append(editText.getText().toString());
         stringBuilder.append("&idUser=4");
         addUserTask.execute(stringBuilder.toString());
-        Toast.makeText(getApplicationContext(),stringBuilder.toString(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Вы добавили "+editText.getText().toString(),Toast.LENGTH_SHORT).show();
+        finish();
     }
 
     TextView textView = null;
